@@ -1,17 +1,23 @@
 
 <div class="container">
-
-
   <h1> liste des cocktails</h1>
 
-  <ul>
+  <div class="row">
+      <% @cocktails.each do |cocktail| %>
+    <div class="col-xs-6 col-sm-4">
 
-    <% @cocktails.each do |cocktail| %>
-    <li>
-      <%= link_to cocktail.name, cocktail_path(cocktail) %>
-    </li>
-    <% end %>
-  </ul>
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://picsum.photos/200/300/?random');">
+        <div class="card-description">
+          <h2> <%= cocktail.name %> </h2>
+          <p>Very cool cocktail</p>
+        </div>
+        <%= link_to '', cocktail_path(cocktail), class: "card-link" %>
+      </div>
 
-  <%= link_to "create a cocktail", new_cocktail_path %>
+    </div>
+      <% end %>
+  </div>
 </div>
+
+
+

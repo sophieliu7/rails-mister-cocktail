@@ -12,8 +12,7 @@
   <% @doses.each do |dose| %>
   <li>
 
-  <%= dose.ingredient.name %>
-  <%= dose.amount %> cl
+  <%= dose.ingredient.name %> - <%= dose.amount %> cl
   </li>
 <% end %>
 </ul>
