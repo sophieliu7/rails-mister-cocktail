@@ -1,0 +1,12 @@
+<h1>Detail du cocktail</h1>
+
+<h2><%= @cocktail.name %></h2>
+
+
+
+
+
+
+<%= link_to "back to list", cocktails_path %>
+
+<%= link_to "add an ingredient", new_cocktail_dose_path(params[:id]) %>
