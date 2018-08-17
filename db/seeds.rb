@@ -9,28 +9,28 @@
 # Ingredient.create(name: "ice")
 # Ingredient.create(name: "mint leaves")
 
-# require 'json'
-# require 'open-uri'
+require 'json'
+require 'open-uri'
 
-# url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
+url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 
-# ingredient_serialized = open(url).read
-# ingredients = JSON.parse(ingredient_serialized)
+ingredient_serialized = open(url).read
+ingredients = JSON.parse(ingredient_serialized)
 
-# ingredients["drinks"].each do |element|
-#   Ingredient.create!(name: element["strIngredient1"])
-# end
+ingredients["drinks"].each do |element|
+  Ingredient.create!(name: element["strIngredient1"])
+end
 
 
 # Cocktail.create!(name: "Absolute exquisite")
 
 # Cocktail.create!(name: "Mojito")
 
-url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list'
+# url2 = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list'
 
-ingredient_serialized = open(url).read
-ingredients = JSON.parse(ingredient_serialized)
+# ingredient_serialized = open(url2).read
+# ingredients = JSON.parse(ingredient_serialized)
 
-ingredients["drinks"].each do |element|
-  Cocktail.create!(name: element["strCategory"])
-end
+# ingredients["drinks"].each do |element|
+#   Cocktail.create!(name: element["strCategory"])
+# end
