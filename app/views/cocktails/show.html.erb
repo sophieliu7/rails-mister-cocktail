@@ -22,9 +22,9 @@
 <% end %>
 </ul>
 
+<%= link_to "Add an ingredient", new_cocktail_dose_path(params[:id]) %>
 
-<%= link_to "back to list", cocktails_path %>
 <br>
+<%= link_to "Back to list", cocktails_path %>
 
-<%= link_to "add an ingredient", new_cocktail_dose_path(params[:id]) %>
 </div>
