@@ -6,8 +6,11 @@ Rails.application.routes.draw do
   # post '/cocktails', to: 'cocktails#create'
 
   resources :cocktails do
-    resources :doses
+    resources :doses, only: [:create, :new]
   end
+  delete "doses/:id", to: "doses#destroy", as: "dose"
+
+
 
   # get 'cocktails/:id/doses/new', to: 'doses#new'
   # post 'cocktails/:id/doses', to: 'doses#create'
