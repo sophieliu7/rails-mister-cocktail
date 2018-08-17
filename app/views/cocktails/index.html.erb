@@ -2,6 +2,9 @@
 <div class="container">
   <h1> liste des cocktails</h1>
 
+  <%= cl_image_tag("nxo0c5afpphwcwhjf2cf",
+      width: 400, height: 300, crop: :fill) %>
+
   <div class="row">
       <% @cocktails.each do |cocktail| %>
     <div class="col-xs-6 col-sm-4">
